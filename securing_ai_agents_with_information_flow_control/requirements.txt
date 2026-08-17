@@ -1,0 +1,5 @@
+# Runtime for the Fides planner (Costa et al., 2025, arXiv:2505.23643v2)
+# No neural training; PyYAML is used only to load configs/base.yaml.
+
+pyyaml>=6.0          # configs/base.yaml
+# openai>=1.82.0     # optional live-model adapter; tests use ScriptedModel
