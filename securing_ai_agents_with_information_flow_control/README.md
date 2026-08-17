@@ -1,3 +1,17 @@
+---
+title: LLM-FW
+emoji: 🛡️
+colorFrom: gray
+colorTo: green
+sdk: gradio
+sdk_version: 5.49.1
+app_file: app.py
+pinned: false
+license: mit
+short_description: Fides IFC firewall for LLM agents (arXiv 2505.23643)
+python_version: "3.10"
+---
+
 # Securing AI Agents with Information-Flow Control
 
 Implementation of [Securing AI Agents with Information-Flow Control](https://arxiv.org/abs/2505.23643v2) (Costa, Köpf, Kolluri, Paverd, Russinovich, Salem, Tople, Wutschitz, Zanella-Béguelin, 2025).
@@ -25,8 +39,13 @@ The LLM is **not** a security boundary.
 ```bash
 pip install -r requirements.txt
 cd securing_ai_agents_with_information_flow_control
-python -m src.evaluate
+python -m src.evaluate          # CLI: attack succeeds, then Fides blocks it
+python app.py                   # local Gradio demo (browser)
 ```
+
+Internship write-up (what to say in a meeting): see [`../INTERNSHIP.md`](../INTERNSHIP.md).
+
+Live showcase: **Hugging Face Spaces**, not Vercel — this is a Python agent loop. Instructions: [`HF_SPACE.md`](HF_SPACE.md).
 
 Expected:
 

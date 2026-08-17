@@ -209,8 +209,9 @@ def make_demo_world(
     secret_contents: str,
     injection_page: str,
     injection_body: str,
+    include_injection: bool = True,
 ) -> World:
-    """§1 scenario: secret internal file + untrusted web page with a PIA."""
+    """§1 scenario: secret internal file + optional poisoned web page."""
     secret_label = SecurityLabel(
         IntegrityLabel.trusted(),
         readers_label(internal_readers, universe),
@@ -229,13 +230,14 @@ def make_demo_world(
         ),
     }
     pages = {
-        injection_page: WebPage(injection_page, injection_body, web_label),
         "benign-status.example": WebPage(
             "benign-status.example",
             "Project X is on track. No action required beyond the weekly summary.",
             web_label,
         ),
     }
+    if include_injection:
+        pages[injection_page] = WebPage(injection_page, injection_body, web_label)
     tau = {
         "files": secret_label,
         "web": web_label,

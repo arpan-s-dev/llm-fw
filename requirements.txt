@@ -1,0 +1,4 @@
+# Hugging Face Spaces installs this file from the git root.
+# Do not add the PyPI package `spaces` — it shadows Hugging Face ZeroGPU.
+pyyaml>=6.0
+gradio>=5.0.0

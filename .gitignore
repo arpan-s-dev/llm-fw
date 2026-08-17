@@ -1,8 +1,42 @@
+# Paper2code / local paper copies (not part of the demo)
 .paper2code_work/
-__pycache__/
-*.pyc
+Project 1/
+*.pdf
+
+# Secrets and local env
 .env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
 .venv/
 venv/
-*.egg-info/
+env/
+
+# Tests / linters
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Gradio / Hugging Face runtime
+.gradio/
+flagged/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
