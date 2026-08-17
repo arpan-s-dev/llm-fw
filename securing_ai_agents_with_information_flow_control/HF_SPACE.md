@@ -1,6 +1,3 @@
-The Space YAML and upload list now live in [`../DEPLOY.md`](../DEPLOY.md) and in this folder’s `README.md` (YAML at the top).
+Space metadata YAML belongs in the Hugging Face Space README, not in this GitHub README.
 
-Create a Gradio CPU Space, then either:
-
-- push the **git root** (recommended), or
-- upload **this folder** as the Space.
+The live Space is already configured. If you recreate it, copy the YAML block from `DEPLOY.md` to the top of the Space README, then this GitHub `README.md` as the body.
